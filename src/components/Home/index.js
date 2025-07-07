@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "../Header";
-import { ThreeDots } from "react-loader-spinner";
+import { PulseLoader } from "react-spinners";
 import "./index.css";
 
 const PAGE_SIZES = [10, 50, 100];
@@ -79,13 +79,12 @@ function Home() {
       <div className="home-container">
         {loading ? (
           <div style={{ flex: 1, display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <ThreeDots
-              height="60"
-              width="60"
-              radius="9"
-              color="#4caf50"
-              ariaLabel="three-dots-loading"
-              visible={true}
+            <PulseLoader
+                color="#4fa94d" // You can set your desired color
+                loading={true} // Control visibility with a boolean state
+                size={15} // Adjust size as needed
+                aria-label="Loading Spinner" // Good for accessibility
+                data-testid="loader"
             />
           </div>
         ) : (
