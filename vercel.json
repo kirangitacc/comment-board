@@ -4,5 +4,5 @@
       "NPM_FLAGS": "--legacy-peer-deps"
     }
   },
-  "buildCommand": "npm install && npm run build"
+  "buildCommand": "npm install --legacy-peer-deps && npm run build"
 }
