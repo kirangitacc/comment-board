@@ -1,0 +1,110 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #232544;
+  color: #fff;
+  padding: 20px 40px;
+  min-height: 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-s-box {
+  background: #4caf50;
+  color: #fff;
+  font-weight: bold;
+  padding: 6px 16px 6px 16px;
+  margin-right: 8px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+}
+
+.logo-s {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: white;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-initials {
+  background: #e0e0e0;
+  color: #232544;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.profile-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Responsive styles for all components */
+/* Place at the bottom of each main CSS file, or in App.css */
+
+@media (max-width: 700px) {
+  /* Header */
+  .header {
+    align-items: stretch;
+    padding: 12px 10px;
+    min-height: 0;
+  }
+  .logo {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .logo-s-box {
+    padding: 4px 10px 4px 10px;
+    font-size: 1.1rem;
+    margin-right: 6px;
+  }
+  .logo-s {
+    font-size: 1.1rem;
+  }
+  .logo-text {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .profile {
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  .profile-initials {
+    width: 28px;
+    height: 28px;
+    font-size: 0.95rem;
+    margin-right: 7px;
+  }
+  .profile-name {
+    font-size: 0.95rem;
+  }
+
+
+}

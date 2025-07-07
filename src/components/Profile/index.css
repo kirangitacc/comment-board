@@ -1,0 +1,132 @@
+.profile-container {
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(44, 62, 80, 0.07);
+  padding: 32px 32px 24px 32px;
+  min-height: 400px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #232544;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 24px 0;
+}
+
+.profile-avatar {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.profile-avatar span {
+  background: #e0e0e0;
+  color: #232544;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.profile-title {
+  text-align: left;
+  margin-left:20px;
+}
+
+.profile-title .profile-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.profile-title .profile-email {
+  font-size: 1rem;
+  color: #888;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 32px;
+  width: 100%;
+}
+
+.profile-info > div {
+  background: none; /* Remove background from outer container */
+  padding: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.profile-info label {
+  font-size: 0.98rem;
+  color: #888;
+  margin-bottom: 3px;
+  display: block;
+  background: none; /* No background for label */
+  padding: 0;
+}
+
+.profile-info .profile-value {
+  background: #f7f7f7;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  color: #232544;
+  margin-bottom: 8px;
+}
+
+/* Responsive styles for all components */
+/* Place at the bottom of each main CSS file, or in App.css */
+
+@media (max-width: 700px) {
+
+  /* Profile */
+  .profile-container {
+    padding: 10px 2vw;
+  }
+  .profile-card {
+    padding: 10px;
+    gap: 18px;
+  }
+  .profile-avatar-row,
+  .profile-avatar {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .profile-avatar {
+    min-width: 100px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+  .profile-title .profile-name {
+    font-size: 1rem;
+  }
+  .profile-title .profile-email {
+    font-size: 0.92rem;
+  }
+  .profile-info {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .profile-info .profile-value {
+    font-size: 0.98rem;
+    padding: 7px 8px;
+  }
+}
