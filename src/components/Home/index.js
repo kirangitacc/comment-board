@@ -119,31 +119,31 @@ function Home() {
                 }
               />
             </div>
-            
             <div className="comments-table">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Post ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Comment</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {paginated.map((c) => (
-                    <tr key={c.id}>
-                      <td>{c.postId}</td>
-                      <td>{c.name}</td>
-                      <td>{c.email}</td>
-                      <td>
-                        {c.body.length > 40 ? c.body.slice(0, 40) + "..." : c.body}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Post ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Comment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      {paginated.map((c) => (
+                        <tr key={c.id}>
+            <td>{c.postId}</td>
+            <td>{c.name}</td>
+            <td>{c.email}</td>
+            <td>
+              {c.body.length > 40 ? c.body.slice(0, 40) + "..." : c.body}
+            </td>
+                        </tr>
+                       ))}
+                    </tbody>
+                </table>
             </div>
+
           </>
         )}
       </div>

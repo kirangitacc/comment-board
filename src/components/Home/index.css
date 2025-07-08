@@ -234,16 +234,18 @@
   /* Sort buttons */
   .sort-buttons {
     flex-wrap: wrap;
+    flex-direction: row;
     gap: 8px;
     justify-content: flex-start;
   }
   
   .sort-btn {
-    width: 100%;
+    width: 31%;
     min-width: 0;
-    font-size: 0.98rem;
-    padding: 7px 10px;
+    font-size: 10px;
+    padding:4px;
     justify-content: flex-start;
+    height:20px;
   }
   
   /* Search input */
@@ -252,41 +254,39 @@
     font-size: 1rem;
     padding: 8px 10px;
   }
-}
-@media (max-width: 700px) {
-  /* Home container and table */
-  .home-container {
-    max-width: 100vw;
-    margin: 10px 0 0 0;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 10px 2vw 10px 2vw;
-    min-height: 0;
-  }
-  .filters-row {
+  .pagination-bar {
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 8px;
     align-items: stretch;
+    gap: 6px;
+    margin-top: 6px;
+    padding: 0 2vw;
   }
-  .sort-buttons {
+  .items-info {
+    margin-right: 0;
+    font-size: 0.92rem;
+    text-align: center;
+  }
+  .pagination-controls {
     flex-wrap: wrap;
-    gap: 8px;
-    justify-content: flex-start;
+    justify-content: center;
+    padding: 2px 0;
+    font-size: 0.92rem;
   }
-  .sort-btn {
-    width: 100%;
-    min-width: 0;
-    font-size: 0.98rem;
-    padding: 7px 10px;
-    justify-content: flex-start;
+   .page-number,
+  .page-arrow {
+    padding: 3px 6px;
+    font-size: 0.92rem;
+    min-width: 22px;
+    margin: 0 1px;
   }
-  .search-input {
-    width: 90%;
-    font-size: 1rem;
-    padding: 8px 10px;
+  .page-size-select {
+    font-size: 0.92rem;
+    padding: 4px 6px;
+    margin-left: 4px;
   }
-  @media (max-width: 700px) {
+}
+
+@media (max-width: 700px) {
   .comments-table {
     width: 100%;
     min-width: 0 !important;
@@ -298,56 +298,6 @@
   }
   .comments-table table {
     width: 100%;
-  }
-  .comments-table th,
-  .comments-table td {
-    padding: 0px 2px;
-    font-size: 0.92rem;
-    word-break: break-word;
-  }
-  .comments-table thead tr th:first-child,
-  .comments-table thead tr th:last-child {
-    border-radius: 0;
-  }
-}
-
-  /* Pagination */
-  .pagination-bar {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-    margin-top: 10px;
-    padding: 0 2vw;
-  }
-  .items-info {
-    margin-right: 0;
-    font-size: 0.95rem;
-    text-align: center;
-  }
-  .pagination-controls {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 4px 0;
-    font-size: 0.95rem;
-  }
-  .page-number,
-  .page-arrow {
-    padding: 4px 8px;
-    font-size: 0.95rem;
-    min-width: 28px;
-    margin: 0 1px;
-  }
-  .page-size-select {
-    font-size: 0.95rem;
-    padding: 5px 8px;
-    margin-left: 6px;
-  }
-}
-
-@media (max-width: 700px) {
-  .comments-table {
-    display: block;
-    width: 100%;
     overflow-x: auto;
     /* Optional: for better appearance */
     border-radius: 8px;
@@ -357,9 +307,43 @@
   .comments-table thead,
   .comments-table tbody,
   .comments-table th,
-  .comments-table td,
-  .comments-table tr {
-    display: revert;
+  .comments-table td {
+    padding: 0px 2px;
+    font-size: 0.92rem;
+    word-break: break-word;
+  }
+  .comments-table thead tr th:first-child,
+  .comments-table thead tr th:last-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius:0px;
+  }
+  .comments-table{
+    max-height: 55vh;
+    overflow-y: auto;
+    display: block;
+    background-color: white;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead{
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 2;
+  }
+
+  th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+    word-break: break-word;
+  }
+  tbody tr {
+    position: static; /* Ensures first comment isn't sticky */
   }
 }
 
